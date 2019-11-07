@@ -135,6 +135,7 @@ body {
   height: 100%;
   padding: 2%;
   padding-top: 0;
+  font-family: 'Dosis', sans-serif;
 }
 /*********** MXINS **********/
 /*********** VARIABLES **********/
@@ -278,14 +279,14 @@ header nav a {
   }
 }
 .section-skills .skills p {
-  border: 1px solid grey;
+  box-shadow: 0.1rem 0.1rem #e6e6e6;
   font-size: 1.8rem;
   padding: 1.1rem;
-  background-color: #e6e6e6;
 }
 @media (max-width: 500px) {
   .section-skills .skills p {
     font-size: 1.2rem;
+    text-align: center;
   }
 }
 /*********** SECTION HISTORY **********/
