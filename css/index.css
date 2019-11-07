@@ -1,1 +1,259 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  padding: 2%;
+  padding-top: 0;
+}
+/*********** VARIABLES **********/
+/*********** HEADER **********/
+header {
+  padding: 2%;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 3.5rem;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+}
+header nav a {
+  padding: 3rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #9ccdfc;
+}
+/*********** SECTION INTRO **********/
+.section-intro {
+  padding: 2%;
+}
+.section-intro img {
+  width: 30%;
+}
+.section-intro .brief h2 {
+  font-size: 3.5rem;
+  margin: 2rem auto 1rem 0;
+}
+.section-intro .brief p {
+  font-size: 1.5rem;
+  margin: 2rem auto 2rem 0;
+}
+.section-intro .about-me p {
+  font-size: 1.5rem;
+  margin: 2rem auto 2rem 0;
+}
+.section-intro .about-me button {
+  border-radius: 5%;
+  font-size: 1.2rem;
+  text-align: center;
+  outline: none;
+  background: #9ccdfc;
+}
+/*********** SECTION SKILLS **********/
+.section-skills {
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.section-skills h3 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.section-skills .details {
+  width: 40%;
+  padding: 3%;
+  padding-left: 0;
+}
+.section-skills .details p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.section-skills .skills {
+  width: 40%;
+  padding: 3%;
+  padding-left: 0;
+}
+.section-skills .skills p {
+  border: 1px solid grey;
+  font-size: 1.8rem;
+  padding: 1.1rem;
+  background-color: #e6e6e6;
+}
+/*********** SECTION HISTORY **********/
+.section-history {
+  padding: 2%;
+}
+.section-history h3 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+.title {
+  background-color: #e6e6e6;
+}
+.title,
+.list {
+  width: 100%;
+  padding: 1%;
+  display: flex;
+  box-shadow: 0.1rem 0.1rem #c0c0c0;
+}
+.title h4,
+.list h4 {
+  width: 25%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+}
+.title p,
+.list p {
+  width: 25%;
+  font-size: 1.2rem;
+  margin-right: 3rem;
+}
+/*********** FOOTER **********/
+footer {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
