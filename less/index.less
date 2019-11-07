@@ -59,27 +59,33 @@ html, body {
 	padding-top: 0;
 }
 
+/*********** MXINS **********/
+
+.flexCenter() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.paragraphStyle() {
+	font-size: 1.5rem;
+	margin: 2rem auto 2rem 0;
+}
+
 /*********** VARIABLES **********/
 
 @main-color: rgb(156, 205, 252);
+@background: rgb(230, 230, 230);
 
 /*********** HEADER **********/
 
 header {
 	padding: 2%;
 	padding-bottom: 0;
-	display: flex;
-	justify-content: space-between;
-
-	h1 {
-		font-size: 3.5rem;
-	}
 	
 	nav {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		width: 50%;
+		.flexCenter();
+		width: 100%;
 
 		a {
 			padding: 3rem;
@@ -87,6 +93,10 @@ header {
 			text-decoration: none;
 			text-transform: uppercase;
 			color: @main-color;
+
+			@media (max-width: 500px) {
+				padding: 1rem;
+			}
 		}
 	}
 }
@@ -94,41 +104,67 @@ header {
 /*********** SECTION INTRO **********/
 
 .section-intro {
-	padding: 2%;
+		padding: 2%;
 	
-	img {
-		width: 30%;
-	}
+		img {
+			width: 30%;
 
-	.brief {
-
-		h2 {
-			font-size: 3.5rem;
-			margin: 2rem auto 1rem 0;
+			@media (max-width: 500px) {
+				width: 100%;
+			}
 		}
 
 		p {
-			font-size: 1.5rem;
-			margin: 2rem auto 2rem 0;
+			.paragraphStyle();
+
+			@media (max-width: 500px) {
+				font-size: 1.2rem;
+			}
+		}
+
+		.brief {
+			margin: 2%;
+			margin-left: 0;
+
+			h2 {
+				font-size: 3.5rem;
+				margin: 2rem auto 1rem 0;
+
+				@media (max-width: 500px) {
+					font-size: 2.5rem;
+				}
+			}
+
+			
+		}
+
+		.about-me {
+			margin: 2%;
+			margin-left: 0;
+			
+			@media (max-width: 500px) {
+				.flexCenter();
+				flex-wrap: wrap;
+			
+				p {
+					width: 100%;
+				}
+
+			}
+
+			button {
+				border-radius: 5%;
+				font-size: 1.2rem;
+				text-align: center;
+				outline: none;
+				background: @main-color;
+
+				@media (max-width: 500px) {
+					width: 100%;
+				}
+			}
 		}
 	}
-
-	.about-me {
-
-		p {
-			font-size: 1.5rem;
-			margin: 2rem auto 2rem 0;
-		}
-
-		button {
-			border-radius: 5%;
-			font-size: 1.2rem;
-			text-align: center;
-			outline: none;
-			background: @main-color;
-		}
-	}
-}
 
 /*********** SECTION SKILLS **********/
 
@@ -137,12 +173,20 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	
+
+	@media (max-width: 500px) {
+		.flexCenter();
+		flex-wrap: wrap;
+	}
+
 	h3 {
 		font-size: 2.2rem;
 		margin-bottom: 2rem;
 		font-weight: 700;
 		
+		@media (max-width: 500px) {
+			font-size: 1.5rem;
+		}
 	}
 
 	.details {
@@ -150,10 +194,17 @@ header {
 		padding: 3%;
 		padding-left: 0;
 
+		@media (max-width: 500px) {
+			width: 100%;		
+		}
+
 		p {
-			font-size: 1.2rem;
-			line-height: 1.5;
-			
+			.paragraphStyle();
+			line-height: 1.2;
+
+			@media (max-width: 500px) {
+				font-size: 1.2rem;		
+			}
 		}
 	}
 
@@ -162,11 +213,19 @@ header {
 		padding: 3%;
 		padding-left: 0;
 
+		@media (max-width: 500px) {
+			width: 100%;		
+		}
+
 		p {
 			border: 1px solid grey;
 			font-size: 1.8rem;
 			padding: 1.1rem;
-			background-color: rgb(230, 230, 230);
+			background-color: @background;
+
+			@media (max-width: 500px) {
+				font-size: 1.2rem;		
+			}
 		}
 	}
 }
@@ -179,12 +238,16 @@ header {
 	h3 {
 		font-size: 2.2rem;
 		margin-bottom: 2rem;
-		font-weight: 500;
+		font-weight: 700;
+
+		@media (max-width: 500px) {
+			font-size: 1.5rem;
+		}
 	}
 }
 
 .title {
-	background-color: rgb(230, 230, 230);
+	background-color: @background;
 }
 
 .title,
@@ -192,20 +255,30 @@ header {
 	width: 100%;
 	padding: 1%;
 	display: flex;
-	box-shadow: .1rem .1rem rgb(192, 192, 192);
+	box-shadow: .1rem .1rem @background;
 
 	h4 {
 		width: 25%;
 		font-size: 1.4rem;
-		font-weight: 700;
+		font-weight: 600;
 		margin-bottom: 2rem;
 		margin-right: 3rem;
+
+		@media (max-width: 500px) {
+			font-size: 1.2rem;
+			font-weight: 300;
+			width: 15%;
+		}
 	}
 
 	p {
 		width: 25%;
 		font-size: 1.2rem;
 		margin-right: 3rem;
+
+		@media (max-width: 500px) {
+			width: 15%;
+		}
 	}
 }
 
@@ -215,4 +288,8 @@ footer {
 	text-align: center;
 	font-size: 2rem;
 	margin: 2rem 0;
+
+	@media (max-width: 500px) {
+		font-size: 1.3rem;
+	}
 }
